@@ -49,6 +49,11 @@ if [[ -s $HOME/.aliases ]]; then
     source $HOME/.aliases
 fi
 
+# Keybinds
+if [[ -s $HOME/.keybinds ]]; then
+    source $HOME/.keybinds
+fi
+
 # Compilation flags
 export MAKEFLAGS="-j 12"
 
