@@ -1,5 +1,5 @@
 configuration {
-	font:							"FantasqueSansMono Nerd Font 12";
+	font:							"CozetteVector 9";
     show-icons:                     false;
 	icon-theme: 					"Papirus";
     drun-display-format:            "{name}";
