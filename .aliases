@@ -1,0 +1,17 @@
+# sudo alias
+alias sudo="sudo "
+
+# vim alias
+alias vim="nvim"
+
+# ls aliases
+alias l="ls -alX"
+
+# top alias
+alias top="bpytop"
+
+# tlmgr alias
+alias tlmgr='/usr/share/texmf-dist/scripts/texlive/tlmgr.pl --usermode'
+
+# dotfiles alias
+alias dots='/usr/bin/git --git-dir=$HOME/.dots/ --work-tree=$HOME'
