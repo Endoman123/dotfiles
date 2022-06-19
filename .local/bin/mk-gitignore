@@ -1,0 +1,13 @@
+#!/bin/sh
+SOURCE=$HOME/src/gitignore
+GITIGNORE=./.gitignore
+
+# Make a gitignore using ~/src/gitignore
+touch $GITIGNORE
+
+for var in "$@"
+do
+    echo "Adding $var.gitignore" 
+    echo "## $var" >> $GITIGNORE
+    cat "$SOURCE/$var.gitignore" >> $GITIGNORE
+done

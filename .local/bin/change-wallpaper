@@ -1,0 +1,9 @@
+#!/bin/sh
+IMG=$(sxiv -afort ~/.local/share/wallpapers)
+
+if [ -z "$IMG" ]; then
+  echo "Keeping background"
+else
+  echo "$IMG" > ~/.wallpaper
+  . set-wallpaper $IMG
+fi

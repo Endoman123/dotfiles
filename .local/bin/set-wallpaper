@@ -1,0 +1,32 @@
+#!/bin/sh
+# Default calling commands
+XWINWRAP="xwinwrap -ni -s -st -sp -nf -ov -b"
+SXIV="sxiv -abpq -s w -f"
+
+# Wait until process has been shut down, then
+# start xwinwrap with new image
+if [[ $# -ne 2 || $2 == "1" ]]; then
+     if [[ -f $HOME/.xwin1.pid ]]; then
+        PID="$(cat $HOME/.xwin1.pid)"
+        while kill "$PID"; do
+            sleep 0.5
+        done
+     fi
+
+    $XWINWRAP -g 1920x1080 -- $SXIV -g 1920x1080 -e WID $1 &
+    echo "$0 $@" > $HOME/.xwin1.rc
+    echo $! > $HOME/.xwin1.pid
+fi 
+
+if [[ $# -ne 2 || $2 == "2" ]]; then
+    if [[ -f $HOME/.xwin2.pid ]]; then
+        PID="$(cat $HOME/.xwin2.pid)"
+        while kill "$PID"; do
+            sleep 0.5
+        done
+    fi
+
+    $XWINWRAP -g 1680x1200+1920+400 -- $SXIV -g 1680x1200 -e WID $1 &
+    echo "$0 $@" > $HOME/.xwin2.rc
+    echo $! > $HOME/.xwin2.pid
+fi

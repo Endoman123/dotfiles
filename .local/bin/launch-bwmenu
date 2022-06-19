@@ -1,0 +1,6 @@
+#!/usr/bin/env bash
+theme="bwmenu"
+
+dir="$HOME/.config/rofi"
+
+bwmenu -- -theme $dir/"$theme"
