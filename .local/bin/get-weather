@@ -1,4 +1,5 @@
 #!/bin/sh
 
-FORMAT='%f'
+#FORMAT='%c%f\n'
+FORMAT='%f\n'
 curl -s wttr.in/Mercer+County+NJ?format=$FORMAT 
