@@ -5,6 +5,7 @@ alias sudo="sudo "
 alias vim="nvim"
 
 # ls aliases
+alias ls="ls --color=auto"
 alias l="ls -alX"
 
 # top alias
